@@ -1,0 +1,10 @@
+# Директории Terraform
+.terraform/
+.terraform.*
+
+# Локальные стейты
+terraform.tfstate
+terraform.tfstate.*
+
+# YAML с чувствительными данными
+settings.yaml

@@ -1,0 +1,18 @@
+settings:
+  cred:
+    host: api://router.local:8728
+    username: admin
+    password: admin
+    insecure: true
+  tun:
+    name: ipip-vpn
+    remote_address: 1.1.1.1
+    ipsec_secret: 12345678
+    mtu: 1300
+    disabled: false
+  network:
+    address: "172.16.0.2/30"
+  routes:
+    routing_table: roskompozor_FWD
+    gateway: 172.16.0.1
+    distance: 250
