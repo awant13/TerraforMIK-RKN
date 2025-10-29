@@ -18,3 +18,9 @@ domains:
   - cdninstagram.com
   - linkedin.com
   - fbcdn.net
+  - ubmidrupalcandd.s3-eu-west-1.amazonaws.com
+  - j2-antiblock.s3-website.eu-west-3.amazonaws.com
+  - fliba-title.s3-website-eu-west-1.amazonaws.com
+  - nintendo.net
+  - bcat-lp1.cdn.nintendo.net.edgesuite.net
+  - hashicorp.com

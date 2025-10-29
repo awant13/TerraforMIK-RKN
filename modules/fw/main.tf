@@ -19,3 +19,10 @@ resource "routeros_ip_firewall_mangle" "rule" {
   passthrough       = true
   comment           = "Terraform managed"
 }
+
+resource "routeros_ip_firewall_nat" "rule" {
+  action        = "masquerade"
+  chain         = "srcnat"
+  out_interface = var.net_settings.tun.name
+  comment       = "Terraform managed"
+}

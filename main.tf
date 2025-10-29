@@ -20,21 +20,24 @@ locals {
   creds    = local.settings["cred"]
   }
 
-module "dns" {
-  for_each = toset(local.domain)
-  source   = "./modules/dns"
+module "dns_server" {
+  net_settings = local.settings
+  source   = "./modules/dns/server"
+}
 
+module "dns_records" {
+  for_each = toset(local.domain)
+  net_settings = local.settings
+  source   = "./modules/dns/records"
   domain = each.key
 }
 
 module "tun" {
   source   = "./modules/tun"
-
   net_settings = local.settings
 }
 
 module "fw" {
   source   = "./modules/fw"
-
   net_settings = local.settings
 }

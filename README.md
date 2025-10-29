@@ -33,6 +33,15 @@ settings:
     username: admin
     password: admin
     insecure: true
+  dns:
+    server: 
+      - 1.1.1.1
+    doh_server: "https://cloudflare-dns.com/dns-query"
+    doh_max_server_connections: "15"
+    doh_max_concurrent_queries: "300"
+    doh_timeout: "5s"
+    address_list_extra_time: "1d"
+    verify_doh_cert: true
   tun:
     name: ipip-vpn
     remote_address: 1.1.1.1
